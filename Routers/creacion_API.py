@@ -63,3 +63,40 @@ database_users = {
         "password": '98765'
     }
 }
+
+# -----------------------------------------------------------
+# Entidades y Bases de Datos (simulada) para Usuarios en JWT
+# -----------------------------------------------------------
+
+class User_2(BaseModel):
+    username: str
+    email: str
+    fullname: str
+    disabled: bool
+
+class UserDB_2(User_2):
+    password: str
+    
+database_users_2 = {
+    "lorenzo": {
+        "username": "lorenzopoggi",
+        "email": "lorenzopoggi@gmail.com",
+        "fullname": "Lorenzo Poggi",
+        "disabled": True,
+        "password": '12345'
+    },
+    "santos": {
+        "username": "santos",
+        "email": "santos@gmail.com",
+        "fullname": "Santos",
+        "disabled": False,
+        "password": '67890'
+    },
+    "pepe": {
+        "username": "pepe",
+        "email": "pepe@gmail.com",
+        "fullname": "Pepe",
+        "disabled": True,
+        "password": '98765'
+    }
+}

@@ -8,6 +8,7 @@ from Routers.metodo_delete import router as router_delete
 from Routers.path_query import router as router_path_query
 from Routers.http_status import router as router_http_status
 from Routers.autorizacion_oauth2 import router as router_oauth2
+from Routers.autenticacion_jwt import router as router_jwt
 
 app = FastAPI()
 
@@ -21,3 +22,4 @@ app.include_router(router_http_status)
 app.mount('/Static', StaticFiles(directory= 'Static/Images/'), name= 'Frontend_Backend')
 app.mount('/Static', StaticFiles(directory= 'Static/Images/'), name= 'Sistemas')
 app.include_router(router_oauth2)
+app.include_router(router_jwt)

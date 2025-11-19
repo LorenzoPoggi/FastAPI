@@ -1,47 +1,39 @@
-# 🚀 Aprendiendo FastAPI – Proyecto Completo
+# ⚡️ FastAPI – Curso de Backend
 
-Este repositorio contiene todos los ejercicios, ejemplos y proyectos desarrollados a lo largo de un curso completo de **FastAPI**, uno de los frameworks más rápidos y modernos para construir APIs con Python.
+En este repositorio vas a encontrar todo el contenido principal para aprender cómo manejar un sistema Backend en uno de los frameworks más rápidos y modernos para construir APIs con Python. También incluye ejercicios, ejemplos y proyectos desarrollados a lo largo del curso.
 
-El objetivo del repositorio es documentar el progreso desde los fundamentos hasta el desarrollo de un sistema de autenticación avanzado con **OAuth2 + JWT**, aplicando conceptos reales utilizados en entornos profesionales.
-
----
-
-## 📑 Tabla de Contenidos
-
-1. Introducción a FastAPI  
-2. Estructura del Proyecto  
-3. Instalación y Puesta en Marcha  
-4. Módulos y Contenido del Curso  
-   - Rutas básicas (GET, POST, PUT, DELETE)  
-   - Path y Query Parameters  
-   - Manejo de HTTP Status  
-   - Routers y modularización  
-   - Archivos estáticos  
-   - CRUD con Base de Datos simulada  
-   - Autenticación con OAuth2 (password flow)  
-   - Hashing de contraseñas con Passlib  
-   - Generación y validación de JWT  
-   - Roles y autorización  
-5. Ejercicios y Proyectos incluidos  
-6. Licencia  
+Este repositorio tiene el fin de documentar todo el progreso de los fundamentos necesarios para el desarrollo de un sistema de autenticación avanzado, aplicando conceptos reales usados en entornos profesionales.
 
 ---
 
-## 📘 1. Introducción a FastAPI
+## Tabla de Contenidos
 
-FastAPI es un framework de Python diseñado para crear APIs de manera sencilla y con performance extremadamente alta.  
+1. [Introducción a FastAPI](#-1-introducción-a-fastapi)  
+2. [Estructura del Proyecto](#️-2-estructura-general-del-proyecto)  
+3. [Instalación y Dependencias](#️-3-instalación-y-ejecución)  
+4. [Módulos y Contenido del Curso](#-4-módulos-y-contenidos-del-curso)  
+5. [Ejercicios y Proyectos Incluidos](#-5-ejercicios-incluidos)  
+6. [Licencia](#-6-licencia)
+
+---
+
+## 1. Introducción a FastAPI
+
+FastAPI es un framework de Python diseñado para crear APIs de manera sencilla y con performance alta.  
 Se basa en:
 
 - Python moderno (type hints)  
-- Pydantic (validación de datos)  
+- Pydantic (modelado de datos)  
 - Starlette (manejo de requests ultrarrápido)  
 - Swagger UI integrado  
 
-Este repositorio recopila todos los ejercicios realizados para aprender cada parte del framework de forma progresiva.
+Este repositorio recopila ejercicios realizados para aprender cada parte del framework de forma progresiva.
 
 ---
 
-## 🗂️ 2. Estructura General del Proyecto
+## 2. Estructura General del Proyecto
+
+```txt
 Backend/
 │
 ├── Exercises/
@@ -66,34 +58,47 @@ Backend/
 │
 ├── main.py
 └── README.md
+```
 
 Cada carpeta contiene módulos independientes del curso, permitiendo un aprendizaje progresivo y ordenado.
 
 ---
 
-## ⚙️ 3. Instalación y Ejecución
+## 3. Instalación y Ejecución
 
 1. Clonar el repositorio:
-git clone https://github.com/tunombre/aprendiendo-fastapi.git
+```txt
+git clone https://github.com/LorenzoPoggi/FastAPI-Backend
+```
 
 2. Crear un entorno virtual:
+```txt
 python3 -m venv venv
+```
 
 3. Activarlo:
+```txt
 source venv/bin/activate   
+```
 
 4. Instalar dependencias generales del curso:
+```txt
 pip install fastapi[standard] passlib[bcrypt] python-jose
+```
 
 5. Ejecutar la API:
+```txt
 fastapi dev main.py
+```
 
 6. Documentación automática disponible en:
+```txt
 http://localhost:8000/docs
+```
 
 ---
 
-## 📚 4. Módulos y Contenidos del Curso
+## 4. Módulos y Contenidos del Curso
 
 ### ✓ Rutas y Métodos HTTP
 - GET, POST, PUT, DELETE
@@ -155,8 +160,7 @@ JWT + hashing + permisos + rutas protegidas + CRUD.
 
 ## 📄 6. Licencia
 
-Este proyecto está disponible bajo la licencia MIT.  
-Podés usarlo libremente para estudio y práctica.
+Este proyecto está disponible bajo la Licencia MIT.  
 
 ---
 

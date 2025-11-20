@@ -1,4 +1,4 @@
-#autorizacion_oauth2.py
+# autorizacion_oauth2.py
 from fastapi import APIRouter, Depends, HTTPException, status
 from Routers.creacion_API import User, UserDB, database_users
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
@@ -30,7 +30,7 @@ async def current_user(token: str = Depends(oauth2)):
                             detail= {'Error:': 'Usuario inactivo'})
     return user 
     
-# Operacion para la autenricacion de usuarios registrados
+# Operacion para la autenticacion de usuarios registrados
 @router.post('/login')
 async def user_login(form: OAuth2PasswordRequestForm = Depends()):
     # Busco el usuario en la base de datos (simulada)

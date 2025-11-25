@@ -24,7 +24,7 @@ def search_user_security(username: str):
     if username in users_list:
         return Usuarios_Security(**users_list[username])
     
-# Criterios de Dependencia 
+# Criterios de Dependencia y Autenticacion
 async def current_user(token: str = Depends(oauth2)):
     user = search_user(token)
     if not user:

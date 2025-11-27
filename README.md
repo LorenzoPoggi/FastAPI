@@ -1,23 +1,26 @@
 # ⚡️ FastAPI – Curso de Backend
 
-En este repositorio vas a encontrar todo el contenido principal para aprender cómo manejar un sistema Backend en uno de los frameworks más rápidos y modernos para construir APIs con Python. También incluye ejercicios, ejemplos y proyectos desarrollados a lo largo del curso.
+<p align="center">
+  <img 
+    src="Imagenes/fastapi.png" 
+    width="30%" 
+    alt="Descripción de tu imagen"
+  />
+</p>
 
-Este repositorio tiene el fin de documentar todo el progreso de los fundamentos necesarios para el desarrollo de un sistema de autenticación avanzado, aplicando conceptos reales usados en entornos profesionales.
+ En este repositorio vas a encontrar todo el contenido principal para aprender cómo manejar un sistema Backend en FastAPI, uno de los frameworks más rápidos y modernos para construir APIs con Python. El objetivo es documentar el progreso de los fundamentos necesarios, con un enfoque en la seguridad avanzada (JWT + Hashing) y la arquitectura modular usada en entornos profesionales.
+
+## 🧭 Tabla de Contenidos
+
+1. [🚀 Introducción a FastAPI](#🚀-introducción-a-fastapi)  
+2. [📁 Estructura del Proyecto](#📁-estructura-general-del-proyecto)  
+3. [⚙️ Instalación y Dependencias](#⚙️-instalación-y-ejecución)  
+4. [Módulos y Contenido del Curso](#módulos-y-contenidos-del-curso)  
+5. [Ejercicios y Proyectos Incluidos](#ejercicios-incluidos)  
 
 ---
 
-## Tabla de Contenidos
-
-1. [Introducción a FastAPI](#-1-introducción-a-fastapi)  
-2. [Estructura del Proyecto](#️-2-estructura-general-del-proyecto)  
-3. [Instalación y Dependencias](#️-3-instalación-y-ejecución)  
-4. [Módulos y Contenido del Curso](#-4-módulos-y-contenidos-del-curso)  
-5. [Ejercicios y Proyectos Incluidos](#-5-ejercicios-incluidos)  
-6. [Licencia](#-6-licencia)
-
----
-
-## 1. Introducción a FastAPI
+## 🚀 Introducción a FastAPI
 
 FastAPI es un framework de Python diseñado para crear APIs de manera sencilla y con performance alta.  
 Se basa en:
@@ -29,13 +32,27 @@ Se basa en:
 
 Este repositorio recopila ejercicios realizados para aprender cada parte del framework de forma progresiva.
 
+<p align="center">
+  <img 
+    src="Imagenes/image.jpg" 
+    width="60%" 
+    alt="Descripción de tu imagen"
+  />
+</p>
+
 ---
 
-## 2. Estructura General del Proyecto
+## 📁 Estructura General del Proyecto
 
 ```txt
 Backend/
 │
+├── Examples/
+│   ├── example_01/
+│   ├── example_02/
+│   ├── example_03/
+│   └── …
+│ 
 ├── Exercises/
 │   ├── exercise_01/
 │   ├── exercise_02/
@@ -64,7 +81,7 @@ Cada carpeta contiene módulos independientes del curso, permitiendo un aprendiz
 
 ---
 
-## 3. Instalación y Ejecución
+## ⚙️ Instalación y Ejecución
 
 1. Clonar el repositorio:
 ```txt
@@ -98,7 +115,7 @@ http://localhost:8000/docs
 
 ---
 
-## 4. Módulos y Contenidos del Curso
+## Módulos y Contenidos del Curso
 
 ### ✓ Rutas y Métodos HTTP
 - GET, POST, PUT, DELETE
@@ -142,7 +159,7 @@ http://localhost:8000/docs
 
 ---
 
-## 🧩 5. Ejercicios incluidos
+## Ejercicios incluidos
 
 ### **Ejercicio 1 – Sistema de Productos**  
 CRUD básico con estructura simple y Pydantic.
@@ -155,15 +172,3 @@ Autenticación con OAuth2, dependencias y roles.
 
 ### **Ejercicio 4 – Inventario Autenticado**  
 JWT + hashing + permisos + rutas protegidas + CRUD.
-
----
-
-## 📄 6. Licencia
-
-Este proyecto está disponible bajo la Licencia MIT.  
-
----
-
-## ✔️ Listo para usar
-
-Podés clonar, modificar o extender el proyecto para tus propios desarrollos mientras seguís aprendiendo FastAPI.

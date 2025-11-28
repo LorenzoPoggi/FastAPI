@@ -3,7 +3,7 @@
 <p align="center">
   <img 
     src="Imagenes/fastapi.png" 
-    width="30%" 
+    width="50%" 
     alt="Descripción de tu imagen"
   />
 </p>

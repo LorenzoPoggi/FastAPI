@@ -18,7 +18,7 @@ def search_user(field: str, key):
     # Busco el usuario en la base de datos segun el campo y la clave proporcionados
     try:
         # Si se encuentra el usuario, retorno el esquema del usuario 
-        user = db_client.local.Usuarios.find_one({field: key})
+        user = db_client.Usuarios.find_one({field: key})
         return User(**user_schema(user))
     except: 
         # Si no se encuentra el usuario, retorno None
@@ -39,9 +39,9 @@ async def add_users(user: User):
     # Elimino el campo 'id' para que MongoDB lo genere automaticamente
     del user_dict['id']  
     # Inserto el usuario del modelo 'User' en la base de datos MongoDB y obtengo el ID generado
-    id = db_client.local.Usuarios.insert_one(user_dict).inserted_id
+    id = db_client.Usuarios.insert_one(user_dict).inserted_id
     # Compruebo cual es el ID del usuario insertado y la operacion lo retorna como un diccionario
-    new_user = user_schema(db_client.local.Usuarios.find_one({"_id": id}))
+    new_user = user_schema(db_client.Usuarios.find_one({"_id": id}))
     # Devuelo un objeto de tipo 'User' con los datos del nuevo usuario insertado
     return User(**new_user)
 
@@ -49,7 +49,7 @@ async def add_users(user: User):
 @router.get("/mongodb", response_model=list[User])
 async def get_users():
     # Retorno todos los usuarios de la base de datos 
-    return users_schema(db_client.local.Usuarios.find())
+    return users_schema(db_client.Usuarios.find())
 
 # Operacion para obtener un usuario con su ID
 @router.get("/mongodb/{id}")
@@ -61,7 +61,7 @@ async def get_user(id: str):
 @router.delete("/mongodb/{id}")
 async def delete_user(id: str, status_code= status.HTTP_204_NO_CONTENT):
     # Busco al usuario en la base de datos MongoDB por su ID y lo elimino
-    found = db_client.local.Usuarios.find_one_and_delete({"_id": ObjectId(id)})
+    found = db_client.Usuarios.find_one_and_delete({"_id": ObjectId(id)})
     # Si no lo encuentro devuelvo un error 
     if not found:
         return {'error': 'no se ha eliminado al usuario'}
@@ -75,9 +75,9 @@ async def replace_user(user: User):
     del user_dict['id']
     try:
         # Busco al usuario en la base de datos y reemplazo los datos a partir del diccionario del user
-        db_client.local.Usuarios.find_one_and_replace({"_id": ObjectId(user.id)}, user_dict)
+        db_client.Usuarios.find_one_and_replace({"_id": ObjectId(user.id)}, user_dict)
     except:
         # Devuelvo un error si no se pudo hacer la operacion
         return {"error": "No se ha actualizado el usuario"}
     # Devuelvo al usuario con los datos actualizados a partir de us ID
-    return search_user("_id", ObjectId(user.id)) 
+    return search_user("_id", ObjectId(user.id))  

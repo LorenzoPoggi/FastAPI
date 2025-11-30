@@ -67,7 +67,7 @@ async def delete_user(id: str, status_code= status.HTTP_204_NO_CONTENT):
         return {'error': 'no se ha eliminado al usuario'}
     
 # Operacion para actualizar un usuario de la base de datos MongoDB
-@router.put('/', response_model=User)
+@router.put('/mongodb', response_model=User)
 async def replace_user(user: User):
     # Convierto el modelo 'User' en un diccionario
     user_dict = dict(user)

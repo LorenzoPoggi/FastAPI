@@ -10,6 +10,7 @@ from Routers.http_status import router as router_http_status
 from Routers.autorizacion_oauth2 import router as router_oauth2
 from Routers.autenticacion_jwt import router as router_jwt
 from Routers.mongoDB import router as router_mongoDB
+from Routers.sqlalchemy import router as router_sqlalchemy
 
 app = FastAPI()
 
@@ -25,3 +26,4 @@ app.mount('/Static', StaticFiles(directory= 'Static/Images/'), name= 'Sistemas')
 app.include_router(router_oauth2)
 app.include_router(router_jwt)
 app.include_router(router_mongoDB)
+app.include_router(router_sqlalchemy)

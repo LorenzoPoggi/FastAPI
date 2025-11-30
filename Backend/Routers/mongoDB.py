@@ -1,9 +1,9 @@
 # mongoDB.py
 
 from fastapi import APIRouter, HTTPException, status
-from DataBase.database import db_client
-from DataBase.Models.models import User
-from DataBase.Schemas.schemas import user_schema, users_schema
+from DataBase.MongoDB.database import db_client
+from DataBase.MongoDB.Models.models import User
+from DataBase.MongoDB.Schemas.schemas import user_schema, users_schema
 from bson import ObjectId
 
 router = APIRouter(tags=["MongoDB"],

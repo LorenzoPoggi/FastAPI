@@ -1,3 +1,4 @@
+# Dependencias para el uso del repositorio 
 fastapi
 uvicorn
 pydantic
@@ -5,3 +6,4 @@ python-jose
 passlib[bcrypt]
 pymongo
 sqlalchemy
+python-multipart

@@ -24,7 +24,14 @@ FastAPI/
 │       ├── exercise_02
 │       └── ...
 │
-├── Backend/                             
+├── Backend/ 
+│   │ 
+│   ├── alembic/
+│   │   ├── versions/                    
+│   │   │   └── initial_migration.py                 
+│   │   ├── env.py                
+│   │   └── sript.py.mako  
+│   │                        
 │   ├── DataBase/
 │   │   ├── MongoDB/                    
 │   │   │   ├── Models/                  
@@ -41,15 +48,17 @@ FastAPI/
 │   │   ├── autenticaciones.py    
 │   │   ├── autorizaciones.py       
 │   │   ├── creacion_de_bases_simuladas.py          
-│   │   ├── exceptions.py          
+│   │   ├── exceptions.py
+│   │   ├── llamada_api_externa.py             
 │   │   ├── http_status.py         
 │   │   ├── metodos.py                     
 │   │   ├── mongoDB.py                   
 │   │   ├── path_query.py                
 │   │   └── sqlalchemy.py                
 │   │
-│   ├── Static/  
-│   │                                        
+│   ├── Static/ 
+│   │
+│   ├── alembic.ini                                     
 │   └── main.py
 │
 ├── Imagenes/                            

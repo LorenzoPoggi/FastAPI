@@ -7,7 +7,7 @@ from pydantic import BaseModel
 import httpx 
 from tenacity import retry, stop_after_attempt, wait_exponential # libreria de reintentos
 
-router = APIRouter(title="Weather API client example")
+router = APIRouter(tags=["Weather API client example"])
 
 # -------------------------------------------
 # Configuracion que lee variables de entorno

@@ -10,66 +10,96 @@
 
 En este repositorio vas a encontrar todo el contenido principal para aprender cómo manejar un sistema Backend en FastAPI, uno de los frameworks más rápidos y modernos para construir APIs con Python. El objetivo es documentar el progreso de los fundamentos necesarios para que cualquiera pueda aprender a como construir una base sólida para desarrollar APIs modernas y profesionales. 
 
-```tre
-
-FastAPI/
-│
-├── Actividades/                         
-│   ├── Examples/                       
-│   │   ├── dashboards_examples.py
-│   │   └── ...
+```
+├── Actividades
 │   │
-│   └── Exercises/                      
-│       ├── exercise_01
-│       ├── exercise_02
-│       └── ...
-│
-├── Backend/ 
-│   │ 
-│   ├── alembic/
-│   │   ├── versions/                    
-│   │   │   └── initial_migration.py                 
-│   │   ├── env.py                
-│   │   └── sript.py.mako  
-│   │                        
-│   ├── DataBase/
-│   │   ├── MongoDB/                    
-│   │   │   ├── Models/                  
-│   │   │   ├── Schemas/                           
-│   │   │   └── database.py
-│   │   │
-│   │   ├── SQLAlchemy/                 
-│   │   │   ├── Models/                  
-│   │   │   ├── Schemas/                
-│   │   │   ├── database.py                 
-│   │   │   └── sqlalchemy.db
+│   ├── exercise_01
+│   │   └── tienda.py
 │   │
-│   ├── Routers/                       
-│   │   ├── autenticaciones.py    
-│   │   ├── autorizaciones.py       
-│   │   ├── creacion_de_bases_simuladas.py          
+│   ├── exercise_02
+│   │   ├── base_model.py
+│   │   └── empleados.py
+│   │
+│   ├── exercise_03
+│   │   ├── base_model.py
+│   │   └── users_authentication.py
+│   │
+│   ├── exercise_04
+│   │   ├── base_model.py
+│   │   └── inventory_managment.py
+│   │
+│   ├── exercise_05
+│   │   ├── base_model.py
 │   │   ├── exceptions.py
-│   │   ├── llamada_api_externa.py             
-│   │   ├── http_status.py         
-│   │   ├── metodos.py                     
-│   │   ├── mongoDB.py                   
-│   │   ├── path_query.py                
-│   │   └── sqlalchemy.py                
+│   │   └── reservas.py
 │   │
-│   ├── Static/ 
-│   │
-│   ├── alembic.ini                                     
-│   └── main.py
+│   └── exercise_06
+│       ├── base_model.py
+│       ├── exceptions.py
+│       └── hoteles.py
 │
-├── Imagenes/                            
-│   └── imagenes.jpg
-|
+├── Backend
+│   │
+│   ├── DataBase
+│   │   │   
+│   │   ├── MongoDB
+│   │   │   │
+│   │   │   ├── Models
+│   │   │   │   └── models.py
+│   │   │   ├── Schemas
+│   │   │   │   └── schemas.py
+│   │   │   └── database.py
+│   │   │ 
+│   │   └── SQLAlchemy
+│   │       │ 
+│   │       ├── Models
+│   │       │   └── models.py
+│   │       ├── Schemas
+│   │       │   └── schemas.py
+│   │       ├── database.py
+│   │       └── sqlalchemy.db
+│   │
+│   ├── Routers
+│   │   │
+│   │   ├── autenticacion_jwt.py
+│   │   ├── autorizacion_oauth2.py
+│   │   ├── creacion_API.py
+│   │   ├── exceptions.py
+│   │   ├── http_status.py
+│   │   ├── llamada_api_externa.py
+│   │   ├── metodo_delete.py
+│   │   ├── metodo_get.py
+│   │   ├── metodo_post.py
+│   │   ├── metodo_put.py
+│   │   ├── mongoDB.py
+│   │   ├── path_query.py
+│   │   └── sqlalchemy.py
+│   │
+│   ├── Static
+│   │   │
+│   │   └── Images
+│   │       ├── image.png
+│   │       └── sistemas.png
+│   │
+│   ├── alembic
+│   │   │
+│   │   ├── versions
+│   │   │   └── 5a198d1d550c_initial_migration.py
+│   │   ├── env.py
+│   │   └── script.py.mako
+│   │
+│   ├── alembic.ini
+│   └── main.py
+│   
+├── Imagenes
+│   ├── fastapi.png
+│   └── image.jpg
+│   
 ├── .gitignore
 ├── Dockerfile
 ├── LICENSE
 ├── README.md
-└── requirements.txt                        
-
+└── requirements.txt
 ```
 
 ## 📁 Contenido del repositorio

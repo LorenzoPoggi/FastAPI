@@ -1,4 +1,4 @@
-# ⚡️ FastAPI – Curso de Backend
+# ⚡️ FastAPI 
 
 <p align="center">
   <img 
